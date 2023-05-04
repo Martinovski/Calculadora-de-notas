@@ -10,15 +10,13 @@ function calcularNotas() {
   // Criação da variável que armazenará o valor restante a ser sacado
   let valorRestante = valorSaque;
 
-  // Utilização do método map para percorrer cada nota disponível e obter a 
-  //quantidade de notas necessárias para o saque
+  // Utilização do método map para percorrer cada nota disponível e obter a quantidade de notas necessárias para o saque
   const quantidadeNotas = notasDisponiveis.map((nota) => {
   
     // Cálculo da quantidade de notas necessárias para a nota atual
     const quantidade = Math.floor(valorRestante / nota);
 
-    // Atualização do valor restante a ser sacado após utilizar as notas da 
-    //nota atual
+    // Atualização do valor restante a ser sacado após utilizar as notas da nota atual
     valorRestante -= quantidade * nota;
 
     // Retorno da quantidade de notas necessárias para a nota atual
@@ -28,8 +26,8 @@ function calcularNotas() {
   // Obtenção do elemento HTML onde será exibido o resultado do cálculo
   const resultado = document.getElementById("resultado");
 
-  // Atualização do conteúdo do elemento HTML com a quantidade de notas 
-  //necessárias para o saque informado
-  resultado.innerHTML = `Quantidade de notas necessárias: ${quantidadeNotas}`;
+  //console.log(quantidadeNotas.join(", "));
+  // Atualização do conteúdo do elemento HTML com a quantidade de notas necessárias para o saque informado
+  resultado.innerHTML = `Quantidade de notas: ${quantidadeNotas.join(" :;: ")}`;
   console = notasDisponiveis;
 }
