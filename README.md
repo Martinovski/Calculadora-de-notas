@@ -1,2 +1,3 @@
 # Calculadora-de-notas
- Com o chatgpt
+ Com o chatgpt 
+ app.gama.academy
